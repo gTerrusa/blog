@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5511c3df-d715-49ba-8da1-8494ea5c49b2",
+    "title": "test",
+    "content": "here's the content",
+    "is_published": true,
+    "created_at": "2022-10-01T22:46"
+  },
+  {
+    "id": "e9d1ca9e-435c-4805-a02a-ad5747c618d8",
+    "title": "new test",
+    "content": "created at 10/15/2022 12:44 PM",
+    "is_published": false,
+    "created_at": "2022-10-15T12:44"
+  }
+]
