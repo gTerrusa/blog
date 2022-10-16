@@ -1,9 +1,9 @@
 /** @tsx h */
 import { h } from "preact";
+import { format } from "https://deno.land/std@0.159.0/datetime/mod.ts";
 import { Remult } from "remult";
 import { useState } from "preact/hooks";
 import { Blog } from "../model/blog.ts";
-import { dateToDateTimeField } from "../utils/date.ts";
 
 const remult = new Remult();
 const blogRepo = remult.repo(Blog);
@@ -82,8 +82,9 @@ export default function Blogs({ data }: { data: Blog[] }) {
                 value={blog.created_at}
                 onInput={(e) =>
                   handleChange({
-                    created_at: dateToDateTimeField(
+                    created_at: format(
                       new Date(e.currentTarget.value),
+                      "yyyy-MM-dd HH:mm",
                     ),
                   })}
                 class="w-full border rounded p-2"

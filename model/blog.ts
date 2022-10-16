@@ -1,5 +1,5 @@
 import { Entity, Fields } from "remult";
-import { dateToDateTimeField } from "../utils/date.ts";
+import { format } from "https://deno.land/std@0.159.0/datetime/mod.ts";
 
 @Entity("blogs", {
   allowApiCrud: true,
@@ -18,5 +18,5 @@ export class Blog {
   is_published = false;
 
   @Fields.string()
-  created_at = dateToDateTimeField(new Date());
+  created_at = format(new Date(), "yyyy-MM-dd HH:mm");
 }
